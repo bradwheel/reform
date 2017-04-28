@@ -15,10 +15,11 @@ module Reform
           process_definition!(options, definition)
         end
 
-        Class.new(self).tap do |composition| # for 1.8 compat. you're welcome.
-          composition.map(options)
-          # puts composition@map.inspect
-        end
+        map(options)
+        # Class.new(self).tap do |composition| # for 1.8 compat. you're welcome.
+          # composition.map(options)
+          # # puts composition@map.inspect
+        # end
       end
 
     private
